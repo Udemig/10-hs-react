@@ -1,6 +1,12 @@
+import Accordion from "./components/Accordion";
 import Card from "./components/Card";
+import Pagination from "./components/classComponent";
+import CountDown from "./components/CountDown";
 import Counter from "./components/Counter";
+import FilterUser from "./components/FilterUser";
+import FunctionComponent from "./components/functionComponent";
 import Header from "./components/Header";
+import UserPage from "./components/UserPage";
 import { users } from "./constants";
 
 const App = () => {
@@ -9,6 +15,7 @@ const App = () => {
   const name = "test";
   return (
     <div>
+      {/* <Header /> */}
       {/* <Header />
       <button className="add">{name}</button> */}
 
@@ -26,7 +33,13 @@ const App = () => {
           key={user.id}
         />
       ))} */}
-      <Counter />
+      {/* <Counter /> */}
+      {/* <Accordion /> */}
+      {/* <Pagination /> */}
+      {/* <FunctionComponent /> */}
+      {/* <UserPage /> */}
+      {/* <CountDown /> */}
+      <FilterUser />
     </div>
   );
 };
