@@ -1,0 +1,52 @@
+{
+  "todos": [
+    {
+      "id": "1",
+      "title": "crud",
+      "status": "daily",
+      "date": "28/05/2024"
+    },
+    {
+      "id": "7c129279-896f-4701-9517-72c0635b2b63",
+      "title": "react",
+      "status": "job",
+      "date": "28.04.2024"
+    },
+    {
+      "id": "7f1f0f3b-45ff-4005-bec8-7c032722fc11",
+      "title": "selam",
+      "status": "important",
+      "date": "28.04.2024"
+    },
+    {
+      "id": "e027cb2b-149a-449b-bcf1-eb87a863fb59",
+      "title": "react",
+      "status": "job",
+      "date": "28.04.2024"
+    },
+    {
+      "id": "cc54fd2b-b3b5-4a7e-9f06-db8aa3de9564",
+      "title": "react",
+      "status": "important",
+      "date": "28.04.2024"
+    },
+    {
+      "id": "9a906e63-69ec-4994-8810-c6847a3078ba",
+      "title": "react",
+      "status": "job",
+      "date": "28.04.2024"
+    },
+    {
+      "id": "59beac30-7d5e-49d3-9287-80c0ef879f2e",
+      "title": "react",
+      "status": "important",
+      "date": "28.04.2024"
+    },
+    {
+      "id": "bbb8b5c2-6978-4215-b441-a45d077142b2",
+      "title": "react",
+      "status": "important",
+      "date": "28.04.2024"
+    }
+  ]
+}
