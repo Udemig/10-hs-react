@@ -40,6 +40,15 @@
 - import { v4 as uuidv4 } from 'uuid'; (as ismini değiştirmeye yarar)
 - uuidv4(); // ⇨ '9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d'
 
+## Axios
+
+- Axios:https://axios-http.com/docs/intro
+- npm i axios (kurulum)
+- Yerleşik değil(javascript veya react içerisinden gelmiyor) pakedini indirmek gerekir.
+- Hataları ve istekleri daha detaylı bir şekilde gösterilir.
+- Veri gönderirken otomatik olarak js verisini json verisine çevirir.
+- İsteklerde fetche göre daha az kod yazarız.
+
 ## fetch
 
 - get

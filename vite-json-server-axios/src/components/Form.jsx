@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { v4 as generateId } from "uuid";
 import axios from "axios";
+import { toast } from "react-toastify";
 const Form = ({ setTodos }) => {
   // Form gönderildiğinde çalışır.
   const inputRef = useRef();
@@ -23,9 +24,35 @@ const Form = ({ setTodos }) => {
     };
     console.log(newTodo);
 
-    // axios
-    //   .post("http://localhost:3000/todos", newTodo)
-    //   .then(() => setTodos((prev) => [...prev, newTodo]));
+    // oluşturduğumuz newTodo objesini db.json dosyasına eklemek için post isteği attık
+    axios
+      .post("http://localhost:3000/todos", newTodo)
+      .then(() => {
+        toast.success("Todo eklendi!", {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+        });
+        setTodos((prev) => [...prev, newTodo]);
+      })
+      // istek başarısız olursa
+      .catch((err) =>
+        toast.error("Üzgünüz sorun oluştu!", {
+          position: "top-right",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+        })
+      );
   };
   return (
     <form
