@@ -27,7 +27,7 @@ export const VideoProvider = ({ children }) => {
       .catch((err) => setError(err.message))
       .finally(() => setIsLoading(false));
   }, [selectedCategory]);
-  console.log(videos);
+
   return (
     <VideoContext.Provider
       value={{

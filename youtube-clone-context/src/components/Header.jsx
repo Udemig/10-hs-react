@@ -1,10 +1,11 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { CiSearch } from "react-icons/ci";
 import { FaBell } from "react-icons/fa";
 import { IoIosVideocam } from "react-icons/io";
 import { MdVideoLibrary } from "react-icons/md";
 
 const Header = () => {
+  const navigate = useNavigate();
   // Form gönderilince çalışacak fonksiyondur.
   const handleSubmit = (e) => {
     e.preventDefault(); // Sayfanın yenilenmesini engeller.
@@ -12,6 +13,8 @@ const Header = () => {
     const text = e.target[0].value;
     // Metin boşssa fonksiyonu durdur
     if (text.trim() === "") return;
+
+    navigate(`/results?search_query=${text}`);
   };
   return (
     <header className="flex justify-between items-center p-4">
