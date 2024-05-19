@@ -11,7 +11,6 @@ const restaurantReducer = (state = initialState, action) => {
     case ActionTypes.REST_LOADING:
       return { ...state, isLoading: true };
     case ActionTypes.REST_ERROR:
-      console.log(action);
       return { ...state, isLoading: false, error: action.payload };
     case ActionTypes.REST_SUCCESS:
       return {

@@ -9,13 +9,15 @@ import Loader from "../components/Loader";
 import RestaurantDetail from "../components/RestaurantDetail";
 import Container from "../components/Container";
 import ProductCard from "../components/ProductCard";
+import { addToBasket, updateItem } from "../redux/actions/basketActions";
+import Error from "../components/Error";
 
 const Restaurant = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
   // İki farklı reducera abone olma
   const productState = useSelector((store) => store.products);
-  console.log(productState);
+
   const { error, isLoading, restaurants } = useSelector(
     (store) => store.restaurants
   );
@@ -24,6 +26,12 @@ const Restaurant = () => {
     dispatch(getProducts(id));
     dispatch(getRestaurants(id));
   }, []);
+
+  const handleAdd = (item, found) => {
+    found
+      ? dispatch(updateItem(found.id, found.amount + 1))
+      : dispatch(addToBasket(item, restaurants));
+  };
 
   return (
     <div>
@@ -56,7 +64,7 @@ const Restaurant = () => {
             <Error />
           ) : (
             productState.products.map((item) => (
-              <ProductCard key={item.id} item={item} />
+              <ProductCard key={item.id} item={item} handleAdd={handleAdd} />
             ))
           )}
         </div>

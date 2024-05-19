@@ -11,7 +11,7 @@ const Main = () => {
   const { isLoading, error, restaurants } = useSelector(
     (store) => store.restaurants
   );
-  console.log(restaurants);
+
   const dispatch = useDispatch();
 
   // verileri almak için method

@@ -19,8 +19,9 @@ const productReducer = (state = initialState, action) => {
         error: false,
         products: action.payload,
       };
+    default:
+      return state;
   }
-  return state;
 };
 
 export default productReducer;

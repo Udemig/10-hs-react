@@ -297,21 +297,21 @@
   ],
   "cart": [
     {
-      "id": "694fb7bc-d49b-4c16-907d-1db9563b1227",
-      "productId": "42",
-      "title": "Margarita Pizza",
-      "price": 12.99,
-      "photo": "https://picsum.photos/211",
-      "restaurantName": "Aromalı Ev",
-      "amount": 1
+      "id": "0da14dfa-e8be-4a2d-908e-47812dc29d1b",
+      "productId": "9",
+      "title": "İtalyan Salata",
+      "price": 8.49,
+      "photo": "https://picsum.photos/208",
+      "restaurantName": "Lezzet Köşesi",
+      "amount": 3
     },
     {
-      "id": "18b6be28-6b5a-4864-b61f-e660bb362e23",
-      "productId": "12",
-      "title": "Çıtır Tavuk Kanadı",
-      "price": 9.99,
-      "photo": "https://picsum.photos/211",
-      "restaurantName": "Aromalı Ev",
+      "id": "9ed81391-e59d-4a91-ad51-2f299fc29292",
+      "productId": "4",
+      "title": "Çikolatalı Brownie",
+      "price": 8.99,
+      "photo": "https://picsum.photos/203",
+      "restaurantName": "Lezzet Köşesi",
       "amount": 1
     }
   ]

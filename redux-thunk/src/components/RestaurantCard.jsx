@@ -4,8 +4,6 @@ import { FaClock } from "react-icons/fa";
 import { MdDeliveryDining } from "react-icons/md";
 
 const RestaurantCard = ({ data }) => {
-  console.log(data);
-  console.log(data);
   return (
     <Link
       to={`/restaurant/${data.id}`}
