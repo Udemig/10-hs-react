@@ -1,0 +1,85 @@
+{
+  "jobs": [
+    {
+      "position": "Marketing Manager",
+      "company": "IBM",
+      "location": "Menlo Park",
+      "status": "Reddedildi",
+      "type": "Tam Zamanlı",
+      "id": "bae91102-6657-4f0e-a84d-82828e352efe",
+      "date": 1712607012428
+    },
+    {
+      "position": "Frontend Developer",
+      "company": "IBM",
+      "location": "İzmir/Bayraklı",
+      "status": "Devam Ediyor",
+      "type": "Tam Zamanlı",
+      "id": "96c452ae-88ce-431c-8a7d-144ed6adfc42",
+      "date": 1712643002478
+    },
+    {
+      "position": "Data Analyst",
+      "company": "Coca Cola",
+      "location": "Menlo Park",
+      "status": "Devam Ediyor",
+      "type": "Uzaktan",
+      "id": "c1c7f9d1-dcf4-4b51-994f-499f8710f072",
+      "date": 1714602002418
+    },
+    {
+      "position": "Product Manager",
+      "company": "Udemig",
+      "location": "Redmond",
+      "status": "Reddedildi",
+      "type": "Yarı Zamanlı",
+      "id": "6b94a2d3-0571-412b-81e0-910d99a2f057",
+      "date": 1712607002328
+    },
+    {
+      "position": "Product Manager",
+      "company": "IBM",
+      "location": "Redmond",
+      "status": "Devam Ediyor",
+      "type": "Yarı Zamanlı",
+      "id": "5fb295d4-ffe7-48a0-bf1b-a6e4e95020d3",
+      "date": 1716607002428
+    },
+    {
+      "position": "Marketing Manager",
+      "company": "Microsoft",
+      "location": "Seattle",
+      "status": "Reddedildi",
+      "type": "Yarı Zamanlı",
+      "id": "d7c4d757-4957-488d-a7f2-f8db05aa2c46",
+      "date": 1318607013502
+    },
+    {
+      "position": "Data Scientist",
+      "company": "Microsoft",
+      "location": "Menlo Park",
+      "status": "Devam Ediyor",
+      "type": "Yarı Zamanlı",
+      "id": "ec72d702-ff65-46e4-bc4c-0ee6d3660913",
+      "date": 1715607078538
+    },
+    {
+      "position": "Data Scientist",
+      "company": "Microsoft",
+      "location": "Menlo Park",
+      "status": "Mülakat",
+      "type": "Tam Zamanlı",
+      "id": "7fb211e4-a53e-4804-b949-9a3d25b8e67c",
+      "date": 1712608152577
+    },
+    {
+      "position": "Marketing Manager",
+      "company": "Udemig",
+      "location": "Seattle",
+      "status": "Devam Ediyor",
+      "type": "Yarı Zamanlı",
+      "id": "14d5f5bb-e514-41df-9f7a-4f2b07d925fc",
+      "date": 1716666673575
+    }
+  ]
+}
