@@ -1,15 +1,6 @@
 {
   "jobs": [
     {
-      "position": "Marketing Manager",
-      "company": "IBM",
-      "location": "Menlo Park",
-      "status": "Reddedildi",
-      "type": "Tam Zamanlı",
-      "id": "bae91102-6657-4f0e-a84d-82828e352efe",
-      "date": 1712607012428
-    },
-    {
       "position": "Frontend Developer",
       "company": "IBM",
       "location": "İzmir/Bayraklı",
@@ -19,15 +10,6 @@
       "date": 1712643002478
     },
     {
-      "position": "Data Analyst",
-      "company": "Coca Cola",
-      "location": "Menlo Park",
-      "status": "Devam Ediyor",
-      "type": "Uzaktan",
-      "id": "c1c7f9d1-dcf4-4b51-994f-499f8710f072",
-      "date": 1714602002418
-    },
-    {
       "position": "Product Manager",
       "company": "Udemig",
       "location": "Redmond",
@@ -35,15 +17,6 @@
       "type": "Yarı Zamanlı",
       "id": "6b94a2d3-0571-412b-81e0-910d99a2f057",
       "date": 1712607002328
-    },
-    {
-      "position": "Product Manager",
-      "company": "IBM",
-      "location": "Redmond",
-      "status": "Devam Ediyor",
-      "type": "Yarı Zamanlı",
-      "id": "5fb295d4-ffe7-48a0-bf1b-a6e4e95020d3",
-      "date": 1716607002428
     },
     {
       "position": "Marketing Manager",
@@ -75,11 +48,20 @@
     {
       "position": "Marketing Manager",
       "company": "Udemig",
-      "location": "Seattle",
-      "status": "Devam Ediyor",
-      "type": "Yarı Zamanlı",
-      "id": "14d5f5bb-e514-41df-9f7a-4f2b07d925fc",
-      "date": 1716666673575
+      "location": "İstanbul",
+      "status": "Mülakat",
+      "type": "Tam Zamanlı",
+      "id": "b7f2b2dc-7b84-41e5-bbbe-5850785f02d6",
+      "date": 1716756086117
+    },
+    {
+      "position": "Marketing Manager",
+      "company": "Emartech",
+      "location": "İstanbul",
+      "status": "Mülakat",
+      "type": "Tam Zamanlı",
+      "id": "f983034e-5d76-4317-8368-502c4c8a8e78",
+      "date": 1716756646867
     }
   ]
 }
