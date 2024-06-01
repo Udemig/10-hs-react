@@ -11,7 +11,7 @@ function App() {
   const [isMapView, setIsMapView] = useState(true);
   //* Detayı gösterilecek elemanın id'si
   const [detailId, setDetailId] = useState(null);
-  console.log(detailId);
+
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -37,9 +37,15 @@ function App() {
         </button>
       </div>
 
-      {isMapView ? <MapView /> : <ListView setDetailId={setDetailId} />}
+      {isMapView ? (
+        <MapView setDetailId={setDetailId} />
+      ) : (
+        <ListView setDetailId={setDetailId} />
+      )}
 
-      {detailId && <Modal detailId={detailId} />}
+      {detailId && (
+        <Modal detailId={detailId} close={() => setDetailId(null)} />
+      )}
     </div>
   );
 }

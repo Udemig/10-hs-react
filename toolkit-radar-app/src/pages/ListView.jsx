@@ -3,7 +3,6 @@ import { useSelector } from "react-redux";
 import ReactPaginate from "react-paginate";
 const ListView = ({ setDetailId }) => {
   const { flights } = useSelector((store) => store.flight);
-  console.log(flights);
   // slice methodunda kullanılacak ilk elemanın statei
   const [itemOffset, setItemOffset] = useState(0);
 

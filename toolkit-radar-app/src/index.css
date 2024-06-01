@@ -104,3 +104,144 @@ header p {
   height: 80vh;
   margin-top: 30px;
 }
+
+.detail-outer {
+  position: fixed;
+  top: 0;
+  z-index: 99999999;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+}
+.detail-inner {
+  background-color: black;
+  width: 300px;
+  height: 90%;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border-radius: 10px;
+  margin-left: 10px;
+  box-shadow: 2px 2px 20px #4c55e1;
+}
+@media (max-width: 650px) {
+  .detail-outer {
+    width: 100%;
+  }
+  .detail-inner {
+    width: 100%;
+    height: 100%;
+    margin-left: 0;
+    border-radius: 0;
+  }
+}
+.detail-inner img {
+  width: 100%;
+  border-radius: 10px;
+}
+.detail-inner p {
+  display: flex;
+  gap: 10px;
+}
+.detail-inner p span:last-child {
+  font-weight: bold;
+  text-transform: capitalize;
+}
+.detail-inner p:last-child {
+  padding: 10px;
+  border-radius: 20px;
+  margin-top: 35px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+}
+.green {
+  background: green;
+}
+.yellow {
+  background: #bebe02;
+}
+.close-wrapper {
+  display: flex;
+  justify-content: end;
+  font-size: 18px;
+  border-radius: 8px;
+}
+.close-wrapper button {
+  background: none;
+  padding: 4px 10px;
+}
+.close-wrapper button:hover {
+  filter: drop-shadow(2px 2px 10px white);
+}
+
+.loader-wrapper {
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+.loader {
+  box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.55);
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 1px solid #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.loader::before {
+  content: "";
+  position: absolute;
+  background: transparent;
+  border: 1px dashed #444;
+  box-shadow: inset -5px -5px 25px rgba(0, 0, 0, 0.25),
+    inset 5px 5px 35px rgba(0, 0, 0, 0.25);
+}
+.loader::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px dashed #444;
+  box-shadow: inset -5px -5px 25px rgba(0, 0, 0, 0.25),
+    inset 5px 5px 35px rgba(0, 0, 0, 0.25);
+}
+.loader span {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background: transparent;
+  top: 50%;
+  left: 50%;
+  border-top: 1px dashed #fff;
+  transform-origin: top left;
+  animation: radar81 2s linear infinite;
+}
+.loader span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: seagreen;
+  transform: rotate(-55deg);
+  transform-origin: top left;
+  filter: blur(30px) drop-shadow(20px 20px 20px seagreen);
+}
+
+@keyframes radar81 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
