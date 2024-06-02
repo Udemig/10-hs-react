@@ -5,6 +5,8 @@ import { useDispatch, useSelector } from "react-redux";
 function App() {
   const dispatch = useDispatch();
 
+  const translateState = useSelector((store) => store.translateReducer);
+  console.log(translateState);
   const { isLoading, error, languages } = useSelector(
     (store) => store.languageReducer
   );
@@ -37,7 +39,7 @@ function App() {
     [languages]
   );
 
-  const handleTranslete = () => {
+  const handleTranslate = () => {
     dispatch(translateText({ sourceLang, targetLang, text }));
   };
 
@@ -46,7 +48,7 @@ function App() {
     setSourceLang(targetLang);
     setTargetLang(sourceLang);
   };
-  console.log(text);
+
   return (
     <div className="bg-zinc-900 h-screen text-white grid place-items-center">
       <div className="w-[80vw] max-w-[1100px] flex flex-col justify-center">
@@ -81,16 +83,25 @@ function App() {
               className="w-full min-h-[300px] max-h-[500px] text-black p-[10px] text-[20px] rounded"
             ></textarea>
           </div>
-          <div className="flex-1">
+          <div className="flex-1 relative">
             <textarea
+              value={translateState.answer}
               disabled
-              className="w-full min-h-[300px] max-h-[500px] text-black p-[10px] text-[20px] rounded"
+              className="w-full min-h-[300px] max-h-[500px] text-gray-200 p-[10px] text-[20px] rounded"
             ></textarea>
+            {translateState.isLoading && (
+              <div className="loader absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
+                <div className="bar"></div>
+                <div className="bar"></div>
+                <div className="bar"></div>
+                <div className="bar"></div>
+              </div>
+            )}
           </div>
         </div>
         {/* buton */}
         <button
-          onClick={handleTranslete}
+          onClick={handleTranslate}
           className="
         bg-zinc-700 mt-3 py-3 px-5 text-[17px] rounded hover:ring-2 hover:bg-zinc-900 transition"
         >
