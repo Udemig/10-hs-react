@@ -20,7 +20,10 @@
 # Matchers - Kontrolcüler
 
 - expect komutu ile birlikte kullanılan ve bir elementin üzerindeki beklentimizi kontrol eden methodlar. (rengi kırmızıdır | input tiklenmiştir | buton aktiftir | yazı içeri şudur | fonkiyon çağrılmıştır | diznin uzunluğu 5 tir )
+- element kontrolleri
 - https://github.com/testing-library/jest-dom
+- diğer kontroller
+- https://jestjs.io/docs/using-matchers
 
 # Test Geliştirme Süreçleri
 
@@ -35,3 +38,16 @@
 - Önce özellik / işlev geliştirilir dah sonra testleri yazılır
 
 - 100% test covarage
+
+# FireEvent
+
+- rtl içerisndde gelen olay tetikleme methodu
+- gerçek kullanıcıdan uzak tepkiler verdiği için yerini userEvent'e bıraktı
+- tetiklenen olaylar gerçek bir insanın tepkisinden çok daha hızlı bir şekilde aniden gerçekleştiği için testlerde tutarsızlıklara ve beklenmedik sonuçlara yol açabiliyor
+
+# UserEvent
+
+- firevent'in modern / gelişmiş versiyonu
+- tetiklediğimiz olaylar firevent gibi doğrudan tetiklenmesi yeirne gerçek bir kullanıyı simüle ederek belirlie bir gecikmenin ardından tetiklenir.
+- kullanılması için kütphanin projeye kurluması gerekir
+- async çalıştığı için async await ile kullanılır
