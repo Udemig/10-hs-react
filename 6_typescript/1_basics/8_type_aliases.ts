@@ -25,3 +25,36 @@ export type SNBType = string | number | boolean;
 let foo1: SNBType = "merhaba";
 let bar1: SNBType = 35;
 let baz1: SNBType = true;
+
+// SORUN: aynı tipin birden fazla kullanıcı için ihtiyaç duyulması
+let user1: { name: string; age: number } = { name: "Ali", age: 40 };
+let user2: { name: string; age: number } = { name: "Fatma", age: 20 };
+let user3: { name: string; age: number } = { name: "Burak", age: 25 };
+
+// tipi sadece değer tanımlarken değil proje içinde bir çok alanda kullanmamız gerekebilir
+// örneğin kullanıcı tipinde veri alan bir fonksiyon olsun
+let explain1 = (user: { name: string; age: number }) => {};
+
+// ÇÖZÜM: Kendi tipimizi oluşturma
+type User = { name: string; age: number };
+
+let user4: User = { name: "Ali", age: 40 };
+let user5: User = { name: "Fatma", age: 20 };
+let user6: User = { name: "Burak", age: 25 };
+
+let explain2 = (user: User) => {};
+
+// Örneğin tuple için kendi tipimizi oluşturalım
+type Geo = [number, number];
+
+let xCoords: Geo = [123, 455];
+let yCoords: Geo = [793, 147];
+
+// Oluşturduğumuz custom type'ları sadece değişken tanımlarken değil fonksiyon tipi tanımlarken dizi tipi tanımlarken kısace tip tanımı yapabileceğimiz her yerde kendi oluşturuğumuz tipleri kullanabiliriz
+
+const flightRoute: Geo[] = [
+  [12, 67],
+  [62, 85],
+  [25, 14],
+  [86, 24],
+];
