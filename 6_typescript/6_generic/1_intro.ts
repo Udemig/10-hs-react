@@ -46,4 +46,4 @@ getRandomEle<boolean>([true, false, true, false]);
  * normalde generic tip alan fonksiyona parametre gönderdiğimiz anda o parametrenin tipini generic oalrak göndeririz ama bu bazı beklenemedik sonuçlar oluşturabiliceğinden her zaman kendimizin göndermesi daha sağlıklı
  */
 
-getRandomEle(["a", "b", 1]);
+getRandomEle(["a", "b", "1"]);
