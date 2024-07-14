@@ -37,3 +37,41 @@ const kisi2: IPerson = {
 type alphanumeric = string | number;
 type arrayType = string[];
 type gasType = "electric" | "diesel" | "fuel";
+type fn = (a: number) => void;
+
+// Örn: ileride oluşturucağımız bir geometrik şekil nesnesinin hangi özellik ve methodlarını tanımladığımızı interface ile yazalım
+interface IShape {
+  width: number;
+  height: number;
+  radius?: number;
+  calculateArea: () => number | string;
+}
+
+// yukarıdaki interface yardımıyla bir nesnenin tipini tanımlayalım
+const square: IShape = {
+  width: 200,
+  height: 200,
+
+  calculateArea() {
+    return this.width * this.height;
+  },
+};
+
+console.log(square.calculateArea());
+
+// farklı nesnenin tipini aynı interface ile tanımlayalım
+const circle: IShape = {
+  width: 40,
+  height: 1,
+  radius: 20,
+
+  calculateArea() {
+    if (this.radius) {
+      return Math.PI * this.radius * this.radius;
+    } else {
+      return "Lütfen yarıçap tanımlayın";
+    }
+  },
+};
+
+console.log(circle.calculateArea());
