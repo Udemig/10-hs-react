@@ -8,8 +8,18 @@ const options = {
   },
 };
 
-const fetchCars = async (): Promise<CarType[]> => {
-  const url = "https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?model=m5";
+type Params = {
+  limit: number;
+  make?: string;
+  model?: string;
+};
+
+const fetchCars = async ({
+  limit,
+  make = "bmw",
+  model = "m4",
+}: Params): Promise<CarType[]> => {
+  const url = `https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?make=${make}&model=${model}&limit=${limit}`;
 
   const res = await fetch(url, options);
 
