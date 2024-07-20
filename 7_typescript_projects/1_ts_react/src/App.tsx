@@ -9,6 +9,7 @@ import { CarType } from "./types";
 import Warning from "./components/Warning";
 import Card from "./components/Card";
 import LoadMore from "./components/LoadMore";
+import { fuels, years } from "./utils/constants";
 
 const App = () => {
   const [params] = useSearchParams();
@@ -40,8 +41,8 @@ const App = () => {
           <SearchBar />
 
           <div className="home__filter-container">
-            <Filter />
-            <Filter />
+            <Filter options={fuels} name="fuel_type" />
+            <Filter options={years} name="year" />
           </div>
         </div>
 

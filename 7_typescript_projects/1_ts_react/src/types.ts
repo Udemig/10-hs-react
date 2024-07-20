@@ -12,3 +12,5 @@ export type CarType = {
   transmission: "m" | "a";
   year: number;
 };
+
+export type OptionType = { label: string; value: string };

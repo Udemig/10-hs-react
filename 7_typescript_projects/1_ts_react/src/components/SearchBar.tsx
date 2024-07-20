@@ -13,20 +13,17 @@ const Button = ({ designs }: { designs?: string }) => {
 
 const SearchBar = () => {
   const [params, setParams] = useSearchParams();
-  const [make, setMake] = useState<string>("");
-  const [model, setModel] = useState<string>("");
+  const [make, setMake] = useState<string>(params.get("make") as string);
+  const [model, setModel] = useState<string>(params.get("model") as string);
 
   // sayfa her rende olduğunda useMemo sayesinde gereksiz yere tekrar hesaplama yapmayacak
-  const options = useMemo(
-    () => makes.map((make) => ({ label: make, value: make })),
-    []
-  );
+  const options = useMemo(() => makes.map((make) => ({ label: make, value: make })), []);
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
 
     // urldeki parametreleri güncelle
-    setParams({ make, model });
+    setParams({ make: make.toLowerCase(), model: model.toLowerCase() });
   };
 
   return (
@@ -37,6 +34,10 @@ const SearchBar = () => {
           className="w-full text-black"
           options={options}
           onChange={(selected) => selected && setMake(selected.value)}
+          defaultValue={{
+            label: params.get("make") as string,
+            value: params.get("make") as string,
+          }}
         />
         <Button designs="sm:hidden" />
       </div>
@@ -48,6 +49,7 @@ const SearchBar = () => {
           placeholder="örn:Civic"
           type="text"
           onChange={(e) => setModel(e.target.value)}
+          value={model}
         />
         <Button designs="sm:ml-6" />
       </div>
