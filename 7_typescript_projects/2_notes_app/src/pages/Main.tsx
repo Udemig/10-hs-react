@@ -25,8 +25,7 @@ const Main = ({ notes, availableTags }: Props) => {
 
   const filtredNotes = notes.filter(
     (note) =>
-      note.title.toLowerCase().includes(title.toLowerCase()) 
-      &&
+      note.title.toLowerCase().includes(title.toLowerCase()) &&
       selectedTags.every((s_tag) =>
         note.tags.some((note_tag) => note_tag.value === s_tag.value)
       )
@@ -36,10 +35,10 @@ const Main = ({ notes, availableTags }: Props) => {
     <div className="container mx-auto py-5">
       {/* Üst Kısım */}
       <Stack direction="horizontal" className="justify-content-between mb-4">
-        <h1 className="d-flex gap-3 align-items-center">
-          <img src="/note_logo.png" width={45} />
-          <span>Notlar</span>
-        </h1>
+        <div className="d-flex gap-3 align-items-center">
+          <img src="/note_logo.png" width={45} alt="white notebook on red background" />
+          <h1>Notlar</h1>
+        </div>
 
         <Link to="/new">
           <Button>Oluştur</Button>
@@ -50,15 +49,16 @@ const Main = ({ notes, availableTags }: Props) => {
       <Form>
         <Row>
           <Col>
-            <Form.Group>
+            <Form.Group controlId="title">
               <Form.Label>Başlığa Göre Ara</Form.Label>
               <Form.Control onChange={(e) => setTitle(e.target.value)} />
             </Form.Group>
           </Col>
           <Col>
             <Form.Group>
-              <Form.Label>Etikete Göre Ara</Form.Label>
+              <Form.Label htmlFor="select">Etikete Göre Ara</Form.Label>
               <ReactSelect
+                id="select"
                 onChange={(all_tags) => setSelectedTags(all_tags as Tag[])}
                 isMulti
                 options={availableTags}
