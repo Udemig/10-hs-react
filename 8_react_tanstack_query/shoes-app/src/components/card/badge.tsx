@@ -5,7 +5,7 @@ const Badge = ({ discount }: { discount?: number }) => {
         discount ? "bg-yellow" : "bg-blue"
       }`}
     >
-      {discount ? `%${discount} off` : "New"}
+      {discount ? `%${discount} İndirim` : "Yeni"}
     </span>
   );
 };

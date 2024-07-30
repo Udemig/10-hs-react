@@ -4,15 +4,15 @@
       "id": "shoe1",
       "name": "NIKE AIR ZOOM PEGASUS 38",
       "picture": [
-        "/item-4.png",
-        "/item-3.png",
-        "/item-2.png",
-        "/item-1.png"
+        "/view-1.png",
+        "/view-2.png",
+        "/view-3.png",
+        "/view-4.png"
       ],
       "description": "Pure Platinum / University Red <br/><br/> Özel indirimlerden hariç tutulmuştur. <br/><br/> Affirm, Klarna veya Afterpay ile faizsiz taksitler halinde ödeme yapın. <br/><br/> Ücretsiz kargo, iade ve değişim için adiClub'a katılın.<br/>",
       "isNew": true,
       "discount": 10,
-      "size": "40,41,42",
+      "size": "38,40,41,42,44,46",
       "color": "blue,gray",
       "gender": "men",
       "price": 150
