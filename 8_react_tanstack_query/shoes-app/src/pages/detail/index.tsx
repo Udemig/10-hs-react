@@ -4,9 +4,10 @@ import { getShoe } from "../../api";
 import Loader from "../../components/loader";
 import Error from "../../components/error";
 import { Shoe } from "../../types";
-import Head from "./Head";
+import Head from "./head";
 import Color from "./color";
 import Size from "./size";
+import xss from "xss";
 
 const Detail = () => {
   const { id } = useParams();
@@ -36,6 +37,17 @@ const Detail = () => {
               <Color data={data.color} />
 
               <Size data={data.size} />
+
+              <div>
+                <h2>Bu ürün hakkında</h2>
+
+                <p
+                  className="font-open my-4"
+                  dangerouslySetInnerHTML={{
+                    __html: xss(data.description),
+                  }}
+                />
+              </div>
             </div>
           </section>
         )
